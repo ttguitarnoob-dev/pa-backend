@@ -27,7 +27,7 @@ cur.execute('INSERT INTO guitars (name, wood_type, cost)'
 
 cur.execute('INSERT INTO guitars (name, wood_type, cost)'
             'VALUES (%s, %s, %s)',
-            ('Guitar numero two2',
+            ('Guitar numero notone111nope',
              'Correllian walnut',
              99999999)
             )
