@@ -1,7 +1,8 @@
-from flask import Flask
+from flask import Flask, request
 import psycopg2
 from flask_cors import CORS
 from functions import *
+
 
 #Init App
 app = Flask(__name__)
@@ -28,6 +29,12 @@ def guitar(id):
     data = handle_fetch_one(id)
     return data
 
+#Create
+@app.route('/guitars', methods=["POST"])
+def create_guitar():
+    poo = request.get_json()
+    print('nameee?', poo, int("334"))
+    return "creaated"
 
 #Run App
 if __name__ == "__main__":
