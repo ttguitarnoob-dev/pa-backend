@@ -18,14 +18,14 @@ cur.execute('CREATE TABLE guitars (id serial PRIMARY KEY,'
                                  'date_added date DEFAULT CURRENT_TIMESTAMP);'
                                  )
 
-cur.execute('INSERT INTO guitars (name, wood, cost)'
+cur.execute('INSERT INTO guitars (name, wood_type, cost)'
             'VALUES (%s, %s, %s)',
             ('Guitar numero one1',
              'Canadian walnut',
              4200)
             )
 
-cur.execute('INSERT INTO guitars (name, wood, cost)'
+cur.execute('INSERT INTO guitars (name, wood_type, cost)'
             'VALUES (%s, %s, %s)',
             ('Guitar numero two2',
              'Correllian walnut',

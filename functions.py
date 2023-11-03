@@ -1,5 +1,6 @@
 import psycopg2
 from flask import jsonify
+import psycopg2.extras
 
 
 
@@ -13,16 +14,32 @@ def get_db_connection():
         database = "paguitars",
         user= "postgres",
         password= "Bungfodder123")
-    print('smtink')
-
     return conn
-    
+
+
 
 
 
 
 #Fetch all
 def handle_fetch():
-    conn = get_db_connection()
-    cur = conn.cursor()
-    cur.execute('SELECT json_agg(guitars) FROM guitars;')
+    print('fetching all')
+    db = get_db_connection()
+    cur = db.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
+    cur.execute('SELECT * FROM guitars;')
+    guitar_data = cur.fetchall()
+    cur.close()
+    db.close()
+    return jsonify(guitar_data)
+
+#Fetch one by id
+def handle_fetch_one(id):
+    print(f"fetching guitar {id}")
+    db = get_db_connection()
+    cur = db.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
+    cur.execute(f"SELECT * FROM guitars WHERE id = {id} ")
+    data = cur.fetchall()
+    cur.close()
+    db.close()
+    return jsonify(data)
+    

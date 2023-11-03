@@ -7,7 +7,6 @@ from functions import *
 app = Flask(__name__)
 CORS(app)
 itwork()
-get_db_connection()
 
 #ROUTES
 
@@ -19,7 +18,15 @@ def home():
 #Guitars Index
 @app.route('/guitars')
 def guitars():
-    return "Hello all guitars"
+    data = handle_fetch()
+    return data
+
+#Show
+@app.route('/guitars/<id>')
+def guitar(id):
+    id = id
+    data = handle_fetch_one(id)
+    return data
 
 
 #Run App
