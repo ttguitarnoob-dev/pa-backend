@@ -43,3 +43,19 @@ def handle_fetch_one(id):
     db.close()
     return jsonify(data)
     
+#Create item
+def handle_create(data):
+    print('data', data["cost"])
+    db = get_db_connection()
+    cur = db.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
+    cur.execute('INSERT INTO guitars (name, wood_type, cost)'
+            'VALUES (%s, %s, %s)',
+            (data["name"],
+             data["wood_type"],
+             int(data["cost"]))
+            )
+    db.commit()
+
+    cur.close()
+    db.close()
+

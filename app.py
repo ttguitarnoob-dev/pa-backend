@@ -34,6 +34,7 @@ def guitar(id):
 def create_guitar():
     poo = request.get_json()
     print('nameee?', poo, int("334"))
+    handle_create(poo)
     return "creaated"
 
 #Run App
