@@ -48,11 +48,16 @@ def handle_create(data):
     print('data', data["cost"])
     db = get_db_connection()
     cur = db.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
-    cur.execute('INSERT INTO guitars (name, wood_type, cost)'
-            'VALUES (%s, %s, %s)',
+    cur.execute('INSERT INTO guitars (name, description, neck_wood, top_wood, shape, back_sides_wood, construction)'
+            'VALUES (%s, %s, %s, %s, %s, %s, %s)',
             (data["name"],
-             data["wood_type"],
-             int(data["cost"]))
+             data['description'],
+             data['neck_wood'],
+             data['top_wood'],
+             data['shape'],
+             data['back_sides_wood'],
+             data['construction']
+             )
             )
     db.commit()
 
