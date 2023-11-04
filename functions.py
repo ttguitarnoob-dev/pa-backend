@@ -45,7 +45,6 @@ def handle_fetch_one(id):
     
 #Create item
 def handle_create(data):
-    print('data', data["cost"])
     db = get_db_connection()
     cur = db.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
     cur.execute('INSERT INTO guitars (name, description, neck_wood, top_wood, shape, back_sides_wood, construction)'
