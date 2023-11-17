@@ -32,7 +32,7 @@ cur.execute('INSERT INTO guitars (name, description, neck_wood, top_wood, shape,
              'Grand Dreadnaught',
              'Canadian Walnut',
              'Constructed using standard guitar making tools',
-             '{"https://cdn.shopify.com/s/files/1/0550/6737/products/BERKELEY-LIVE-ANGLED-RIGHT.jpg", "https://www.native-instruments.com/typo3temp/pics/img-welcome-hero-picked-acoustic-welcome-47c4eec96d4d847293f871cafc7cad2f-m@2x.jpg"}'
+             ["https://cdn.shopify.com/s/files/1/0550/6737/products/BERKELEY-LIVE-ANGLED-RIGHT.jpg", "https://www.native-instruments.com/typo3temp/pics/img-welcome-hero-picked-acoustic-welcome-47c4eec96d4d847293f871cafc7cad2f-m@2x.jpg"]
              )
             )
 
@@ -45,9 +45,11 @@ cur.execute('INSERT INTO guitars (name, description, neck_wood, top_wood, shape,
              'Slightly unimpressive Auditorium',
              'Pine shavings held together by glue',
              'Constructed using a screwdriver and a box cutter',
-             '{"https://3.bp.blogspot.com/-hCj1ENOhrjQ/TzycGGkwCvI/AAAAAAAABbM/GMAiX4x9yqs/s1600/sitting.JPG"}'
+             ["https://3.bp.blogspot.com/-hCj1ENOhrjQ/TzycGGkwCvI/AAAAAAAABbM/GMAiX4x9yqs/s1600/sitting.JPG"]
              )
             )
+
+
 
 conn.commit()
 
