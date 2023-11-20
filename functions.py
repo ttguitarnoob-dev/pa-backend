@@ -47,15 +47,16 @@ def handle_fetch_one(id):
 def handle_create(data):
     db = get_db_connection()
     cur = db.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
-    cur.execute('INSERT INTO guitars (name, description, neck_wood, top_wood, shape, back_sides_wood, construction)'
-            'VALUES (%s, %s, %s, %s, %s, %s, %s)',
+    cur.execute('INSERT INTO guitars (name, description, neck_wood, top_wood, shape, back_sides_wood, construction, photos)'
+            'VALUES (%s, %s, %s, %s, %s, %s, %s, %s)',
             (data["name"],
              data['description'],
              data['neck_wood'],
              data['top_wood'],
              data['shape'],
              data['back_sides_wood'],
-             data['construction']
+             data['construction'],
+             data['photos']
              )
             )
     db.commit()
