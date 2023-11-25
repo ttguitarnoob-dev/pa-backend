@@ -3,29 +3,30 @@ import psycopg2
 
 
 data = [
-    {
-        "back_sides_wood": "Canadian Walnut",
-        "construction": "Constructed using standard guitar making tools",
-        "date_added": "Sat, 04 Nov 2023 00:00:00 GMT",
-        "description": "this guitar was built to be a guitar.  It was successfully made as a guitar",
-        "id": 1,
-        "name": "Guitar numero one1",
-        "neck_wood": "Ebony colored ebony",
-        "shape": "Grand Dreadnaught",
-        "top_wood": "Bohemian Spruce",
-        "photos": ["https://gallagherguitar.com/wp-content/uploads/2022/08/IMG_1849-scaled.jpg", "https://cdn.mos.cms.futurecdn.net/qDEs6xt2aX5eDtiLFTFYm7-1200-80.jpg"]
-    },
+    
     {
         "back_sides_wood": "Pine shavings held together by glue",
         "construction": "Constructed using a screwdriver and a box cutter",
         "date_added": "Sat, 04 Nov 2023 00:00:00 GMT",
         "description": "this guitar was built for a child prodigy in western montezuma.",
         "id": 2,
-        "name": "Guitar numero notone1",
+        "name": "Shred Machina",
         "neck_wood": "Ebony colored spruce",
         "shape": "Slightly unimpressive Auditorium",
         "top_wood": "Home Depot Plywood",
         "photos": ["https://www.cortguitars.com/_DATA/editor/2203/dbf796aa2576a284e4f3063ac9fa7fdb_1647839581_0505.jpg", "https://3.bp.blogspot.com/-hCj1ENOhrjQ/TzycGGkwCvI/AAAAAAAABbM/GMAiX4x9yqs/s1600/sitting.JPG"]
+    },
+    {
+        "back_sides_wood": "Canadian Walnut",
+        "construction": "Constructed using standard guitar making tools",
+        "date_added": "Sat, 04 Nov 2023 00:00:00 GMT",
+        "description": "this guitar was built to be a guitar.  It was successfully made as a guitar",
+        "id": 1,
+        "name": "Broomhilt",
+        "neck_wood": "Ebony colored ebony",
+        "shape": "Grand Dreadnaught",
+        "top_wood": "Bohemian Spruce",
+        "photos": ["https://gallagherguitar.com/wp-content/uploads/2022/08/IMG_1849-scaled.jpg", "https://cdn.mos.cms.futurecdn.net/qDEs6xt2aX5eDtiLFTFYm7-1200-80.jpg"]
     },
 ]
 
